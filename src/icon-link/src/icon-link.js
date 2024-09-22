@@ -1,8 +1,7 @@
-import { LitElement, html, css } from 'lit';
-import { styleMap } from 'lit/directives/style-map.js';
+import { LitElement, html } from 'lit'
 import { generalStyles } from './css/styles';
 
-export class ProgressBar extends LitElement {
+export class IconLink extends LitElement {
   static properties = {
     radius: { type: Number },
     stroke: { type: Number },
@@ -30,19 +29,9 @@ export class ProgressBar extends LitElement {
   render() {
     this._circleconfig = this._calculateCircle();
     return html`
-      <svg height="${this.radius * 2}" width="${this.radius * 2}">
-        <circle
-          stroke="${this.strokeColor}"
-          fill="transparent"
-          stroke-width="${this.stroke}"
-          stroke-dasharray="${this._circleconfig.circumference} ${this
-            ._circleconfig.circumference}"
-          style="stroke-dashoffset: ${this._circleconfig.offset};"
-          r="${this._circleconfig.normalizedRadius}"
-          cx="${this.radius}"
-          cy="${this.radius}"
-        />
-      </svg>
+      <a href="${this.link}" class="icon-link">
+        <span class="icon-link__text">${this.text}</span>
+      </a>
     `;
   }
 

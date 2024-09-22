@@ -1,4 +1,4 @@
-export const progressBarConstants = [
+export const iconLinkConstants = [
   {
     INDEX_PATH: '/index.html',
     AWARDS_PATH: '/awards.html',
