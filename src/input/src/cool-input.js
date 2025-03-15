@@ -38,6 +38,7 @@ export class Input extends LitElement {
         ${this.label}
       </label>`
   }
+
   _getInput() {
     return html`<input 
       id="cool_input-${this.name}" 
