@@ -1,8 +1,14 @@
 /** @type { import('@storybook/web-components-webpack5').StorybookConfig } */
 const config = {
   stories: [
-    '../src/**/*.stories.@(js|jsx|ts|tsx)'
-
+    {
+      directory: '../src',
+      files: '**/stories/*.@(mdx)'
+    },
+    {
+      directory: '../src',
+      files: '**/stories/*.stories.@(js|jsx|ts|tsx)'
+    }
   ],
   addons: ['@storybook/addon-links', '@storybook/addon-essentials'],
   framework: {
