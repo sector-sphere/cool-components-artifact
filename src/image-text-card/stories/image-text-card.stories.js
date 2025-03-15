@@ -1,5 +1,5 @@
 import { html } from 'lit';
-import '../../src/image-text-card/image-text-card.js';
+import '../image-text-card.js';
 
 export default {
   title: 'componentes/Image text Card',

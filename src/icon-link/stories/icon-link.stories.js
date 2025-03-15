@@ -1,5 +1,5 @@
 import { html } from 'lit';
-import '../../src/icon-link/icon-link.js';
+import '../icon-link.js';
 
 export default {
   title: 'Componentes/Icon Link',

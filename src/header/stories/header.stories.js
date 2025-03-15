@@ -1,5 +1,5 @@
 import { html } from 'lit';
-import '../../src/header/header.js';
+import '../header.js';
 
 export default {
   title: 'componentes/Header',

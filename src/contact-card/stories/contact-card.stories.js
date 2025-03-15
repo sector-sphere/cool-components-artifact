@@ -1,10 +1,10 @@
 import { html } from 'lit';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { action } from '@storybook/addon-actions';
-import '../../src/button/cool-button.js';
+import '../cool-contact-card.js';
 
 export default {
-  title: 'componentes/Toggle button',
+  title: 'componentes/Contact Card',
   argTypes: {
     selected: {
       control: { type: 'boolean' }
@@ -12,26 +12,26 @@ export default {
     disabled: {
       control: { type: 'boolean' }
     }
-  }
+  },
 };
 
 function clickEvent(ev) {
   action(`action ${ev.type}`)(ev.detail);
 }
 
-const CoolButtonTemplate = ({ id, selected, text, disabled }) => html`
-  <cool-button
+const CoolCardTemplate = ({ id, selected, text, disabled }) => html`
+  <cool-contact-card
     .id="${id}"
     .selected="${selected}"
     .text="${text}"
     ?disabled="${disabled}"
     @statusChange="${clickEvent}"
   >
-  </cool-button>
+  </cool-contact-card>
 `;
 
-export const ToggleButton = CoolButtonTemplate.bind({});
-ToggleButton.args = {
+export const ContactCard = CoolCardTemplate.bind({});
+ContactCard.args = {
   id: 'project',
   selected: false,
   text: 'Proyectos emprendedores',
